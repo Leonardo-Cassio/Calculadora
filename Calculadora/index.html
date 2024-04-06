@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="centro">
+        <div id="app">
+            <div class="calculadora">
+                <div class="display">
+                    {{ display }}
+                </div>
+                <div class="linha">
+                    <button class="operador" v-on:click="lidarlimpar('C')">C</button>
+                </div>
+                <div class="linha">
+                    <button @click="lidarbotao('7')">7</button>
+                    <button @click="lidarbotao('8')">8</button>
+                    <button @click="lidarbotao('9')">9</button>
+                    <button class="operador" @click="lidarbotao('/')">/</button>
+                </div>
+                <div class="linha">
+                    <button @click="lidarbotao('4')">4</button>
+                    <button @click="lidarbotao('5')">5</button>
+                    <button @click="lidarbotao('6')">6</button>
+                    <button class="operador" @click="lidarbotao('*')">*</button>
+                </div>
+                <div class="linha">
+                    <button @click="lidarbotao('1')">1</button>
+                    <button @click="lidarbotao('2')">2</button>
+                    <button @click="lidarbotao('3')">3</button>
+                    <button class="operador" @click="lidarbotao('-')">-</button>
+                </div>
+                <div class="linha">
+                    <button class="decimal" @click="lidarbotao('.')">.</button>
+                    <button @click="lidarbotao('0')">0</button>
+                    <button class="igual" @click="lidarbotao('=')">=</button>
+                    <button class="operador" @click="lidarbotao('+')">+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="index.js"></script>
